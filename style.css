@@ -32,16 +32,20 @@ h3 {
   align-items: center;
   padding: 20px 80px;
   background-color: white;
+  flex-wrap: wrap;
+  position: relative;
+  box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
+.logo img {
+  max-height: 50px;
 }
 
 .navbar ul {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul li {
@@ -59,6 +63,32 @@ h3 {
   color: #0d6efd;
 }
 
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+}
+
+.hamburger span {
+  font-size: 2rem;
+}
+
+.hamburger .close-icon {
+  display: none;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+
+
+
 /* Hero Section */
 .hero {
   display: flex;
@@ -66,6 +96,7 @@ h3 {
   padding: 40px 80px;
   text-align: left;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hero-content {
@@ -184,6 +215,7 @@ h3 {
   justify-content: space-between;
   padding: 40px 80px;
   text-align: left;
+  flex-wrap: wrap;
 }
 
 .providers-content {
@@ -229,6 +261,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .download-content {
@@ -318,11 +351,13 @@ h3 {
   justify-content: space-between;
   padding: 0px 40px;
   margin-top: 40px;
+  flex-wrap: wrap;
 }
 .testifyer {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .testifyer > h5 {
@@ -513,4 +548,177 @@ h3 {
 
 .footer-column ul li a:hover {
   text-decoration: underline;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
+
+/* HEADER */
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+}
+
+/* HEADER ENDS HERE */
+
+@media screen and  (min-width:320px) and (Max-width:768px) {
+  /* HEADER */
+  .header{
+    padding: 10px 20px;
+    margin-bottom: 40px;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .hamburger-icon {
+    display: none;
+  }
+
+  .hamburger.active .close-icon {
+    display: inline;
+  }
+  /* HEADER END */
+  .hero{
+    padding: 10px 20px;
+  }
+.hero-content{
+  width: 100%;
+}
+
+.hero-content h1{
+  font-size: 22px;
+  text-align: center;
+}
+.hero-content p{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.hero-image img{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.services{
+  padding: 0px 20px;
+  margin-top: 30px;
+}
+
+.service-card{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.service-card>h3,p{
+  text-align: center;
+}
+
+.healthcare-providers{
+  padding: 10px 20px;
+}
+.providers-content{
+  width: 100%;
+}
+
+.providers-image img{
+  width: 100%;
+}
+
+.providers-content h2{
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.download-app{
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.download-content{
+  width: 100%;
+}
+
+.download-app h2{
+  font-size: 24px;
+}
+
+.testimonials{
+  padding: 10px 20px;
+}
+
+.test-bg{
+  display: none;
+}
+
+.testimonials>.testimonial-content{
+  width: 100%;
+  padding: 14px 10px;
+}
+
+.testimonial{
+  padding: 0px 10px;
+}
+
+.testifyer{
+  gap: 5px;
+  justify-content: center;
+}
+
+.testimonial>p{
+  margin-top: 14px;
+}
+
+.testimonials h2{
+  font-size: 24px;
+}
+
+.latest-articles{
+  padding: 10px 0px;
+}
+
+.article-details{
+  padding: 10px;
+}
+
+.footer{
+  margin-top: 40px;
+  height: 100%;
+  padding: 10px 20px;
+}
+
+.footer-bg{
+  display: none;
+}
+
 }
